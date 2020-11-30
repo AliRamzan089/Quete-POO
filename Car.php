@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
 class Car extends Vehicle
 {
@@ -71,5 +72,14 @@ class Car extends Vehicle
         } finally {
             echo "Ma voiture roule comme un donut";
         }
+    }
+    public function switchOn(): bool
+    {
+       return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 }
